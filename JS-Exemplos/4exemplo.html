@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo 4</title>
+</head>
+<body>
+    <script>
+        // Exemplo 4
+        var marcas = ["Fiat", "Chevrolet", "Ford", "Volkswagen"]; // Declaração da variável marcas com quatro elementos com as iniciais variadas 
+        var marcasIniciadasComF = []; // Declaração da variável marcasIniciadasComF sem nenhum elemento
+        var novoIndice = 0; // Valor 0 atribuído a var novoIndice
+
+        function selecionarMarcas(item, indice) { // Declaração de uma função callback, chamada selecionarMarcas, que recebe cada elemento e posição do array
+        if (marcas[indice].indexOf("F") == 0) { 
+        // Para ler o primeiro caractere, utiliza-se o método indexOF() para encontrar um valor dentro de uma string ou array; 
+        marcasIniciadasComF[novoIndice] = marcas[indice]; 
+        // Var marcas atribuída a var marcasIniciadasComF com índice 0 pois procura-se o caractere inicial em busca da letra F
+        novoIndice++; // Incremento
+        }
+    }
+
+        marcas.forEach(selecionarMarcas); // Chama a função selecionarMarcas para cada elemento em marcas
+        console.log(marcasIniciadasComF); // Imprime no console os itens armazenados na variável; Retorna ["Fiat", "Ford"]
+    </script>
+</body>
+</html>

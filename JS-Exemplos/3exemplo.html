@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <script>
+        // Exemplo 3
+        var numeros = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Variável do tipo array com uma sequência numérica de zero a dez
+        var total = 0; // Criando e atibuindo valor 0 a variável total
+
+        function somar(item, indice) { // Declaração de uma função callback, chamada somar, que recebe cada elemento e posição do array
+        total += item; // Atribuição do operador de adição, adicionando o valor da var item a var total
+        numeros[indice] = total; // Atualiza os valores declarados no array com os valores obtidos com a somatória de cada posição
+        }
+
+        numeros.forEach(somar); // Chama a função somar para cada elemento em numeros
+        console.log(numeros); // Imprime no console os itens desse array
+    </script>
+</body>
+</html>

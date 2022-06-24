@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo 5</title>
+</head>
+<body>
+    <script>
+        // Exemplo 5
+        var nomes = ["Alberto", "Alex", "Sandro", "Roberta"]; // Declaração da variável nomes com quatro elementos 
+
+        function converterParaMaiusculo(item, indice) { // Declaração de uma função callback, chamada converterParaMaiusculo, que recebe cada elemento e posição do array
+        nomes[indice] = nomes[indice].toUpperCase(); // Criação de um loop, aplicando o método toUpperCase() para transformar os valores do array nome em maiúsculo
+    }
+
+        nomes.forEach(converterParaMaiusculo); // Chama a função comverterParaMaiusculo para cada elemento em nomes
+        console.log(nomes); // Imprime no console os itens desse array em maiúsculo
+    </script>
+</body>
+</html>

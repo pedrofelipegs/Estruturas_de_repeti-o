@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo 6</title>
+</head>
+<body>
+    <script>
+        // Exemplo 6
+        var nomes = ["Alberto", "Alex", "Sandro", "Ana Roberta"]; // Declaração da variável nomes com quatro elementos
+        var tamanhoNome = 0; // Criando e atibuindo valor 0 a variável tamanhoNome
+        var nome = ""; // Declaração a var nome string vazia
+
+        function maiorNome(item, indice) { // Declaração de uma função callback, chamada maiorNome, que recebe cada elemento e posição do array
+        if (nomes[indice].length > tamanhoNome) { // Compara as variáveis entre si 
+        nome = nomes[indice]; // Atribui a variável nome o maior valor
+        tamanhoNome = nomes[indice].length; // Pega a quantidade do nomes[1], aumentando o índice a cada volta
+        // Utiliza-se o método length para pegar a quantidade de letras do nomes até obter todos os valores
+        }
+    }
+
+        nomes.forEach(maiorNome); // Chama a função maiorNome para cada elemento em nomes
+        console.log(nome); // Retorna Ana Roberta
+    </script>
+</body>
+</html>

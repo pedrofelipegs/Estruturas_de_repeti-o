@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>For in e For of</title>
+</head>
+<body>
+    <script>
+        // 3 exemplos FOR IN
+        // Exemplo 1
+        const cores = [ 'Verde', 'Amarelo', 'Azul', 'Branco' ] // Declaração da variável cores com quatro elementos
+    
+        for (const index in cores) {    // For in const index itera sobre um objeto de cores
+            console.log(index, cores[index])   // Mostra no console o valor do index e a cor referente ao valor
+        }
+
+
+        // Exemplo 2
+        const pessoa = {   // Objeto pessoa 
+            nome: 'Bruno', // Nome
+            idade: 25      // Idade
+        }
+    
+        for (const index in pessoa) {  // For in const index itera sobre um objeto pessoa
+            console.log(`${index} - ${pessoa[index]}`)  // Mostra no console o nome das propriedades e seu respectivo valor 
+        }
+    
+
+        // Exemplo 3
+        const produtos = [  // Declaração da variável produtos com alguns elementos
+            { descricao: 'Resma Ofício', valor: 11.50, quantidade: 10 },  // Primeiro
+            { descricao: 'Lapis preto', valor: 0.50, quantidade: 3 },     // Segundo
+            { descricao: 'Transferidor plastico', valor: 1.20, quantidade: 4 }  // Terceiro
+        ]
+    
+        let total2 = 0;  // Criando e atibuindo valor 0 a variável total2 
+    
+        for (const index in produtos) {  // For in const index itera sobre um objeto produtos
+            const { valor, quantidade } = produtos[index]  // Atribui o valor e a quantidade aos itens
+    
+            total2 += valor * quantidade  // Multiplica o valor do item pela quantidade do item
+        }
+    
+        console.log(total2) // Mostra no console o valor armazenado em total2
+
+
+
+    
+
+        // 3 exemplos FOR OF
+        // Exemplo 1
+        const numeros = [ 10, 11, 22, 23, 34, 45, 66, 17, 28, 93, 101 ] // Declaração da variável numeros com alguns números
+    
+        for (const numero of numeros) {  // Estrutura for of que pecorre os vallores de um objeto iterável
+            console.log(numero)  // Mostra no console
+        }
+
+
+        // Exemplo 2
+        const carros = [   // Declaração da variável carros com alguns elementos
+            { id: 1, modelo: 'Corsa', marca: 'Chevrolet', preco: 18000 },    // Primeiro
+            { id: 2, modelo: 'Punto', marca: 'Fiat', preco: 12000 },         // Segundo
+            { id: 3, modelo: 'Gol', marca: 'Volkswagen', preco: 14000 },     // Terceiro
+            { id: 4, modelo: 'Saveiro', marca: 'Volkswagen', preco: 20000 }, // Quarto
+            { id: 5, modelo: 'Uno', marca: 'Fiat', preco: 12000 }            // Quinto
+        ]
+    
+        let total3 = 0;   // Criando e atibuindo valor 0 a variável total3 
+    
+        for (const carro of carros) {     // Extrutura For Of
+            total3 += carro.preco  // Atribuição do operador de adição, adicionando o valor do preço do carro a variável total3
+        }
+    
+        // converte o número para o padrão monetário
+        const valorFinal = Number(total3).toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })
+    
+        console.log(valorFinal) // Retorna R$ 76,000.00
+
+
+        // Exemplo 3
+        const artigo = document.querySelectorAll('article > p')  // Capturando todos os parágrafos de uma página HTML
+    
+        for (const paragrafo of artigo) { // Estrutura For Of
+            paragrafo.classList.add("read")  // Adicionando a classe read em cada um dos elementos
+        }
+    
+    </script>
+</body>
+</html>
